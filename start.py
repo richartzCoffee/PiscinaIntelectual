@@ -17,8 +17,12 @@ ________________________________________________________________________________
 '''
 
 from smartPool import accessDatabase
+from smartPool import informationValidation
+
+
+print(informationValidation.validation_cpf("11223759997"))
 
 
 
 
-print(accessDatabase.find_user_name('lalala'))
+
