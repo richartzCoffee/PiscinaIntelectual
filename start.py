@@ -17,12 +17,9 @@ ________________________________________________________________________________
 '''
 
 from smartPool import accessDatabase
-from smartPool import informationValidation
+from smartPool import cryptographyAndValidation
+
+teste = accessDatabase.User()
 
 
-print(informationValidation.validation_cpf("11223759997"))
-
-
-
-
-
+print(teste.find_access(1))

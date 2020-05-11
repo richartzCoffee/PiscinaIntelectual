@@ -1,5 +1,6 @@
 
 
+
 def validation_cpf(cpf):
 
     cpf = cpf.replace(".","")
@@ -18,11 +19,9 @@ def validation_cpf(cpf):
         sum_digits = 0
 
         while len(cpf_test) < 11:
-            for i,v in enumerate(cpf_test):
-                sum_digits += (len(cpf_test) +1 -i)*v
-
-
-            rest = sum_digits%11
+            for i, v in enumerate(cpf_test):
+                sum_digits += (len(cpf_test) + 1 - i)*v
+            rest = sum_digits % 11
             sum_digits = 0
 
             if rest > 1:
@@ -40,4 +39,18 @@ def validation_cpf(cpf):
             return False
 
 
-#def validation_password():
+# def validation_password():
+
+
+def cryptography_password(password):
+    from hashlib import sha256
+    return sha256(password.encode('utf-8')).hexdigest()
+
+
+def validation_password(password_a, password_b):
+    return True if password_a == password_b else False
+
+
+def clear_str(word):
+    word = word.strip(" ")
+    return word
