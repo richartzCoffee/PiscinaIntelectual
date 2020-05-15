@@ -1,6 +1,5 @@
 
 
-
 def validation_cpf(cpf):
 
     cpf = cpf.replace(".","")
@@ -31,15 +30,11 @@ def validation_cpf(cpf):
                 rest = 0
                 cpf_test.append(rest)
 
-
         if cpf_test == cpf_int:
             return True
 
         else:
             return False
-
-
-# def validation_password():
 
 
 def cryptography_password(password):

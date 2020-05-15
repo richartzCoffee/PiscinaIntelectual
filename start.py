@@ -16,10 +16,65 @@ as ações da piscina intelectual.
 _________________________________________________________________________________
 '''
 
-from smartPool import accessDatabase
-from smartPool import cryptographyAndValidation
+"""
+____________________________
+    Funções do sistema
+----------------------------
 
-teste = accessDatabase.User()
+"""
+'''
+lista_user = []
+
+def login_user():
+
+    password = login_screen.lineEditPassword.text()
+    name_user = login_screen.lineEditUser.text()
 
 
-print(teste.find_access(1))
+    if password != and name_user != :
+
+        login_screen.lineEditPassword.clear()
+        login_screen.lineEditUser.clear()
+        user_actual = user.find_name(name_user)
+        if user_actual:
+
+            if cryptographyAndValidation.validation_password(user_actual[0].password, password):
+
+
+                windons_login_screen.quit()
+                global lista_user
+                lista_user.append(user_actual[0])
+
+'''
+
+
+from smartPool import LoginInterface
+
+
+from PyQt5 import uic, QtWidgets
+import sys
+
+
+if __name__ == '__main__':
+
+    u = LoginInterface.WindowLogin()
+    u.windon()
+
+
+
+
+
+"""
+---------------------------------------------
+        declaração de objetos
+---------------------------------------------
+"""
+
+
+
+
+
+
+
+
+
